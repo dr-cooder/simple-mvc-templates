@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <title>{{title}}</title>
 </head>
 <body>
     <h1>Welcome to page 1 </h1>
+
+    {{#if names}}
+        <h2>Names:</h2>
+        <ul>
+            {{#each names}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    {{/if}}
+
+
     <!-- links or URLs are always GET resources as they are getting (retrieving) a resource -->
     <a href="/">Home</a>
     <a href="/page2">Page 2</a>
